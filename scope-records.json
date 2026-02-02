@@ -1,0 +1,146 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "org_id": "9d57d65c-a0f4-4f98-b42f-6df5d3db53f7",
+    "cmmc_level": 2,
+    "status": "complete",
+    "current_step": 5,
+    "assessment_type": "Level 2 Self-Assessment",
+    "source": "wizard",
+    "scope_data": {
+      "cuiBasics": {
+        "cuiCategories": ["PRVCY", "CTI", "ITAR"],
+        "cuiDescription": "We handle Controlled Technical Information related to defense contracts, including technical drawings, specifications, and engineering data. We also process Privacy Act information for personnel records and ITAR-controlled technical data.",
+        "cuiLocations": ["On-premise servers in data center", "Cloud storage (AWS GovCloud)", "Encrypted laptops for authorized personnel", "Secure file shares"]
+      },
+      "boundary": {
+        "inScopeNetworks": ["Corporate LAN (VLAN 100)", "Engineering Network (VLAN 200)", "Cloud VPC (AWS GovCloud)"],
+        "excludedSystems": ["Guest WiFi network", "HR benefits portal (outsourced)", "Marketing website"],
+        "cloudProviders": ["AWS GovCloud", "Microsoft 365 GCC High"],
+        "externalConnections": ["VPN to prime contractor", "Secure file transfer with DoD customer", "EDI connection for supply chain"]
+      },
+      "assets": [
+        {
+          "id": "asset-001",
+          "name": "Engineering File Server",
+          "type": "CUI Asset",
+          "category": "Server",
+          "location": "Primary Data Center",
+          "owner": "IT Operations",
+          "description": "Main file server for engineering documents and technical data"
+        },
+        {
+          "id": "asset-002",
+          "name": "AWS GovCloud Workloads",
+          "type": "CUI Asset",
+          "category": "Cloud Service",
+          "location": "AWS GovCloud US-East",
+          "owner": "Cloud Team",
+          "description": "Cloud-hosted applications processing CUI"
+        },
+        {
+          "id": "asset-003",
+          "name": "Engineering Workstations",
+          "type": "CUI Asset",
+          "category": "Endpoint",
+          "location": "Building A",
+          "owner": "Engineering",
+          "description": "CAD workstations used for technical drawings"
+        },
+        {
+          "id": "asset-004",
+          "name": "Corporate Firewall",
+          "type": "Security Protection Asset",
+          "category": "Network Security",
+          "location": "Primary Data Center",
+          "owner": "IT Security",
+          "description": "Palo Alto firewall protecting network perimeter"
+        },
+        {
+          "id": "asset-005",
+          "name": "SIEM Platform",
+          "type": "Security Protection Asset",
+          "category": "Security Monitoring",
+          "location": "Cloud",
+          "owner": "IT Security",
+          "description": "Splunk Cloud for security monitoring and logging"
+        }
+      ],
+      "keyContacts": [
+        {
+          "name": "John Smith",
+          "title": "CISO",
+          "email": "jsmith@example.com",
+          "phone": "555-0100",
+          "role": "Executive Sponsor"
+        },
+        {
+          "name": "Jane Doe",
+          "title": "IT Security Manager",
+          "email": "jdoe@example.com",
+          "phone": "555-0101",
+          "role": "Assessment Lead"
+        },
+        {
+          "name": "Bob Johnson",
+          "title": "Network Administrator",
+          "email": "bjohnson@example.com",
+          "phone": "555-0102",
+          "role": "Technical POC"
+        }
+      ],
+      "sspInputs": {
+        "systemName": "Acme Defense Information System",
+        "systemDescription": "Integrated information system supporting defense contract work including engineering design, project management, and secure communications with DoD customers and prime contractors.",
+        "operationalStatus": "Operational",
+        "systemType": "Major Application",
+        "authorizationBoundary": "The authorization boundary includes all IT assets within VLANs 100 and 200, the AWS GovCloud VPC, and associated security infrastructure."
+      },
+      "diagramInputs": {
+        "networkTopology": "Star topology with core switch, segmented VLANs, and DMZ for external connections",
+        "dataFlowDescription": "CUI flows from external sources via encrypted channels, processed on engineering workstations, stored on file servers and cloud storage, and transmitted to customers via secure file transfer.",
+        "securityZones": ["External DMZ", "Internal User Zone", "Restricted Engineering Zone", "Cloud Zone"]
+      }
+    },
+    "warnings": [],
+    "generated_outputs": {
+      "ssp_generated": true,
+      "diagram_generated": true,
+      "last_export_date": "2025-01-15T10:30:00Z"
+    },
+    "created_by": "12345678-1234-1234-1234-123456789012",
+    "created_at": "2025-01-10T14:22:33.000000+00:00",
+    "updated_at": "2025-01-15T10:30:00.000000+00:00"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "org_id": "9d57d65c-a0f4-4f98-b42f-6df5d3db53f7",
+    "cmmc_level": 2,
+    "status": "in_progress",
+    "current_step": 2,
+    "assessment_type": "Unknown",
+    "source": "wizard",
+    "scope_data": {
+      "cuiBasics": {
+        "cuiCategories": ["CTI"],
+        "cuiDescription": "Technical specifications for subcontract work",
+        "cuiLocations": ["Local file server"]
+      },
+      "boundary": {
+        "inScopeNetworks": [],
+        "excludedSystems": [],
+        "cloudProviders": [],
+        "externalConnections": []
+      },
+      "assets": [],
+      "keyContacts": [],
+      "sspInputs": {},
+      "diagramInputs": {}
+    },
+    "warnings": ["Incomplete asset inventory", "Missing key contacts"],
+    "generated_outputs": {},
+    "created_by": "12345678-1234-1234-1234-123456789012",
+    "created_at": "2025-01-18T09:15:00.000000+00:00",
+    "updated_at": "2025-01-18T09:15:00.000000+00:00"
+  }
+]
